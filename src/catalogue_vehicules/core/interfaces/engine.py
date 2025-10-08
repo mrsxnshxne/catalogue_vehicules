@@ -3,8 +3,8 @@ from abc import ABC, abstractmethod
 class Engine(ABC):
 
     def __init__(self, type: str, power: int):
-        self._type = type
-        self._power = power
+        self.__type = type
+        self.__power = power
 
     @property
     @abstractmethod
@@ -19,6 +19,10 @@ class Engine(ABC):
     @power.setter
     @abstractmethod
     def power(self, power: int):
+        pass
+
+    @abstractmethod
+    def get_autonomy(self) -> float:
         pass
 
     @abstractmethod

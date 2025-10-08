@@ -1,11 +1,6 @@
 from abc import ABC, abstractmethod
 
 class Engine(ABC):
-
-    def __init__(self, type: str, power: int):
-        self.__type = type
-        self.__power = power
-
     @property
     @abstractmethod
     def type(self) -> str:

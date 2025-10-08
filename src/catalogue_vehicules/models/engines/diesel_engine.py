@@ -39,9 +39,3 @@ class DieselEngine(Engine):
 
     def get_autonomy(self) -> float:
         return self.__tank_capacity * 100 / self.__consumption
-    
-    def start_engine(self):
-        print("Starting DieselEngine...")
-
-    def stop_engine(self):
-        print("Stopping DieselEngine...")

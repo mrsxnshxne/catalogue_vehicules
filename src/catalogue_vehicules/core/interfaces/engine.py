@@ -19,11 +19,3 @@ class Engine(ABC):
     @abstractmethod
     def get_autonomy(self) -> float:
         pass
-
-    @abstractmethod
-    def start_engine(self):
-        pass
-
-    @abstractmethod
-    def stop_engine(self):
-        pass

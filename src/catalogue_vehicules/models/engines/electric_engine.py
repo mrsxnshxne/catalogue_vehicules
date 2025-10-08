@@ -39,9 +39,3 @@ class ElectricEngine(Engine):
 
     def get_autonomy(self) -> float:
         return self.__battery_capacity * 100 / self.__consumption
-
-    def start_engine(self):
-        print("Starting ElectricEngine...")
-
-    def stop_engine(self):
-        print("Stopping ElectricEngine...")

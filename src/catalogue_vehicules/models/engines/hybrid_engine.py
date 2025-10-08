@@ -73,9 +73,3 @@ class HybridEngine(Engine):
 
     def get_autonomy(self) -> float:
         return self.__tank_capacity * 100 / self.__tank_consumption + self.__battery_capacity * 100 / self.__battery_consumption
-
-    def start_engine(self):
-        print("Starting HybridEngine...")
-
-    def stop_engine(self):
-        print("Stopping HybridEngine...")

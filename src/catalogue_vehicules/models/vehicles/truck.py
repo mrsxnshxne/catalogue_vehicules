@@ -1,5 +1,5 @@
-from catalogue_vehicules.core.interfaces.engine import Engine
-from catalogue_vehicules.core.interfaces.vehicle import Vehicle
+from catalogue_vehicules.core.interfaces.models.engine import Engine
+from catalogue_vehicules.core.interfaces.models.vehicle import Vehicle
 
 
 class Truck(Vehicle):

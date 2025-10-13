@@ -1,5 +1,5 @@
-from catalogue_vehicules.core.interfaces.engine import Engine
-from catalogue_vehicules.core.interfaces.vehicle import Vehicle
+from catalogue_vehicules.core.interfaces.models.engine import Engine
+from catalogue_vehicules.core.interfaces.models.vehicle import Vehicle
 
 
 class Car(Vehicle):
@@ -59,3 +59,6 @@ class Car(Vehicle):
     @trunk.setter
     def trunk(self, trunk: int):
         self.__trunk = trunk
+
+    def __str__(self) -> str:
+        return f"Car(brand={self.__brand}, model={self.__model}, year={self.__year}, kilometers={self.__kilometers}, trunk={self.__trunk}, engine={self.__engine})"

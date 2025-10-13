@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from catalogue_vehicules.core.interfaces.engine import Engine
+from catalogue_vehicules.core.interfaces.models.engine import Engine
 
 class Vehicle(ABC):
     @property

@@ -1,4 +1,4 @@
-from catalogue_vehicules.core.interfaces.engine import Engine
+from catalogue_vehicules.core.interfaces.models.engine import Engine
 
 
 class ElectricEngine(Engine):

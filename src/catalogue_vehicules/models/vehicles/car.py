@@ -4,14 +4,13 @@ from catalogue_vehicules.core.interfaces.vehicle import Vehicle
 
 class Car(Vehicle):
 
-    def __init__(self, engine: Engine, brand: str, model: str, year: int, trunk_volume: int, category: str, kilometers: float = 0.0):
+    def __init__(self, engine: Engine, brand: str, model: str, year: int, kilometers: float, trunk: int):
         self.__engine = engine
         self.__brand = brand
         self.__model = model
         self.__year = year
         self.__kilometers = kilometers
-        self.__trunk_volume = trunk_volume
-        self.__category = category
+        self.__trunk = trunk
 
     @property
     def engine(self) -> Engine:
@@ -54,17 +53,9 @@ class Car(Vehicle):
         self.__kilometers = kilometers
 
     @property
-    def storage(self) -> int:
-        return self.__trunk_volume
+    def trunk(self) -> int:
+        return self.__trunk
 
-    @storage.setter
-    def storage(self, trunk_volume: int):
-        self.__trunk_volume = trunk_volume
-
-    @property
-    def category(self) -> str:
-        return self.__category
-
-    @category.setter
-    def category(self, category: str):
-        self.__category = category
+    @trunk.setter
+    def trunk(self, trunk: int):
+        self.__trunk = trunk

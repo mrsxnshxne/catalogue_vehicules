@@ -4,13 +4,13 @@ from catalogue_vehicules.core.interfaces.vehicle import Vehicle
 
 class Moto(Vehicle):
 
-    def __init__(self, engine: Engine, brand: str, model: str, year: int, license_type: str, kilometers: float = 0.0):
+    def __init__(self, engine: Engine, brand: str, model: str, year: int, kilometers: float, license: str):
         self.__engine = engine
         self.__brand = brand
         self.__model = model
         self.__year = year
         self.__kilometers = kilometers
-        self.__license_type = license_type
+        self.__license = license
 
     @property
     def engine(self) -> Engine:
@@ -53,9 +53,9 @@ class Moto(Vehicle):
         self.__kilometers = kilometers
 
     @property
-    def license_type(self) -> str:
-        return self.__license_type
+    def license(self) -> str:
+        return self.__license
 
-    @license_type.setter
-    def license_type(self, license_type: str):
-        self.__license_type = license_type
+    @license.setter
+    def license(self, license: str):
+        self.__license = license

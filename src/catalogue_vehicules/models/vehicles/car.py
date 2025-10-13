@@ -1,10 +1,21 @@
+"""
+This module contains the Truck class, which represents a truck vehicle.
+"""
+
 from catalogue_vehicules.core.interfaces.models.engine import Engine
 from catalogue_vehicules.core.interfaces.models.vehicle import Vehicle
 
 
 class Car(Vehicle):
-
-    def __init__(self, engine: Engine, brand: str, model: str, year: int, kilometers: float, trunk: int):
+    def __init__(
+        self,
+        engine: Engine,
+        brand: str,
+        model: str,
+        year: int,
+        kilometers: float,
+        trunk: int,
+    ):
         self.__engine = engine
         self.__brand = brand
         self.__model = model
@@ -61,4 +72,11 @@ class Car(Vehicle):
         self.__trunk = trunk
 
     def __str__(self) -> str:
-        return f"Car(brand={self.__brand}, model={self.__model}, year={self.__year}, kilometers={self.__kilometers}, trunk={self.__trunk}, engine={self.__engine})"
+        return (
+            f"Car(brand={self.__brand}, "
+            f"model={self.__model}, "
+            f"year={self.__year}, "
+            f"kilometers={self.__kilometers}, "
+            f"trunk={self.__trunk}, "
+            f"engine={self.__engine})"
+        )

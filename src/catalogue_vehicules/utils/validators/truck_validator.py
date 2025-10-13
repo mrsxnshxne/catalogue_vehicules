@@ -1,8 +1,21 @@
+"""
+Truck data validator decorator.
+"""
+
 from functools import wraps
 
 VALID_MOTOR_TYPES = {"gasoline", "diesel", "hybrid", "electric"}
 
+
 def validate_truck_data(func):
+    """
+    Decorator to validate truck data before processing.
+    :param func: The function to be decorated.
+    :return: The wrapped function.
+    :rtype: function
+    :raises ValueError: If validation fails.
+    """
+
     @wraps(func)
     def wrapper(*args, **kwargs):
         data = args[1]
@@ -12,7 +25,7 @@ def validate_truck_data(func):
             ("year", int),
             ("kilometers", int),
             ("engine_type", str),
-            ("max_weight", int)
+            ("max_weight", int),
         ]
 
         for field, field_type in required_fields:

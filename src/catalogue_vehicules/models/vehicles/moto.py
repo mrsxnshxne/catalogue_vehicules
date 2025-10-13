@@ -1,16 +1,28 @@
+"""
+This module contains the Truck class, which represents a truck vehicle.
+"""
+
 from catalogue_vehicules.core.interfaces.models.engine import Engine
 from catalogue_vehicules.core.interfaces.models.vehicle import Vehicle
 
 
 class Moto(Vehicle):
 
-    def __init__(self, engine: Engine, brand: str, model: str, year: int, kilometers: float, license: str):
+    def __init__(
+        self,
+        engine: Engine,
+        brand: str,
+        model: str,
+        year: int,
+        kilometers: float,
+        license_type: str,
+    ):
         self.__engine = engine
         self.__brand = brand
         self.__model = model
         self.__year = year
         self.__kilometers = kilometers
-        self.__license = license
+        self.__license = license_type
 
     @property
     def engine(self) -> Engine:
@@ -57,5 +69,5 @@ class Moto(Vehicle):
         return self.__license
 
     @license.setter
-    def license(self, license: str):
-        self.__license = license
+    def license(self, license_type: str):
+        self.__license = license_type
